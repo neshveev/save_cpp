@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejommy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 16:55:56 by ejommy            #+#    #+#             */
-/*   Updated: 2019/04/05 12:19:19 by ejommy           ###   ########.fr       */
+/*   Created: 2019/04/05 13:03:01 by ejommy            #+#    #+#             */
+/*   Updated: 2019/04/05 14:58:49 by ejommy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef ZOMBIEHORDE_HPP
+#define ZOMBIEHORDE_HPP
 
+#include "Zombie.hpp"
 #include <string>
 
-class Zombie
+class ZombieHorde
 {
-	std::string	_name;
-	std::string	_type;
+	Zombie	*_horde;
+	size_t	_nbZombie;
 public:
-	Zombie();
-	Zombie( std::string, std:: string );
-	void	setParams( std::string, std:: string );
-	~Zombie();
-	void	announce( void );
+	ZombieHorde( size_t );
+	ZombieHorde( void );
+	~ZombieHorde( void );
+	void announce( void );
+	std::string	randomChump( void );
 };
 
 #endif

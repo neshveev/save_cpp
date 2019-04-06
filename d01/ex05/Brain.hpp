@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejommy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 16:55:56 by ejommy            #+#    #+#             */
-/*   Updated: 2019/04/05 12:19:19 by ejommy           ###   ########.fr       */
+/*   Created: 2019/04/05 16:12:20 by ejommy            #+#    #+#             */
+/*   Updated: 2019/04/05 17:25:57 by ejommy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef BRAIN_H
+#define BRAIN_H
 
 #include <string>
 
-class Zombie
+class Brain
 {
-	std::string	_name;
-	std::string	_type;
+	std::string	_adr;
 public:
-	Zombie();
-	Zombie( std::string, std:: string );
-	void	setParams( std::string, std:: string );
-	~Zombie();
-	void	announce( void );
+	Brain( void );
+	~Brain( void );
+	void	setAdr( void );
+	std::string	identify( void );
 };
 
 #endif

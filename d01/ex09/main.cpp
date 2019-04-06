@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejommy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 16:55:56 by ejommy            #+#    #+#             */
-/*   Updated: 2019/04/05 12:19:19 by ejommy           ###   ########.fr       */
+/*   Created: 2019/04/06 16:46:38 by ejommy            #+#    #+#             */
+/*   Updated: 2019/04/06 17:04:09 by ejommy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "Logger.hpp"
 
-#include <string>
-
-class Zombie
+int	main()
 {
-	std::string	_name;
-	std::string	_type;
-public:
-	Zombie();
-	Zombie( std::string, std:: string );
-	void	setParams( std::string, std:: string );
-	~Zombie();
-	void	announce( void );
-};
+	Logger	m = Logger("test");
 
-#endif
+	m.log("Consol", "trulala");
+	m.log("File", "boo");
+	m.log("Consol", "tralala");
+	m.log("File", "foo");
+	m.log("File", "qoo");
+	return (0);
+}

@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   ex04.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejommy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 16:55:56 by ejommy            #+#    #+#             */
-/*   Updated: 2019/04/05 12:19:19 by ejommy           ###   ########.fr       */
+/*   Created: 2019/04/05 15:02:22 by ejommy            #+#    #+#             */
+/*   Updated: 2019/04/05 15:16:42 by ejommy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
-
 #include <string>
+#include <iostream>
 
-class Zombie
+int	main()
 {
-	std::string	_name;
-	std::string	_type;
-public:
-	Zombie();
-	Zombie( std::string, std:: string );
-	void	setParams( std::string, std:: string );
-	~Zombie();
-	void	announce( void );
-};
+	std::string	str = "HI THIS IS BRAIN";
+	std::string	*p = &str;
+	std::string	&r = str;
 
-#endif
+	std::cout << str << std::endl;
+	std::cout << *p << std::endl;
+	std::cout << r << std::endl;
+	return (0);
+}

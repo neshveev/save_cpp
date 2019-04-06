@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Human.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejommy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 16:55:56 by ejommy            #+#    #+#             */
-/*   Updated: 2019/04/05 12:19:19 by ejommy           ###   ########.fr       */
+/*   Created: 2019/04/06 14:49:41 by ejommy            #+#    #+#             */
+/*   Updated: 2019/04/06 15:42:22 by ejommy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef HUMAN_HPP
+# define HUMAN_HPP
 
 #include <string>
 
-class Zombie
+class Human
 {
-	std::string	_name;
-	std::string	_type;
+private:
+	void meleeAttack(std::string const & target);
+	void rangedAttack(std::string const & target);
+	void intimidatingShout(std::string const & target);
 public:
-	Zombie();
-	Zombie( std::string, std:: string );
-	void	setParams( std::string, std:: string );
-	~Zombie();
-	void	announce( void );
+	void action(std::string const & action_name, std::string const & target);
 };
 
 #endif

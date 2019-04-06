@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejommy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 16:55:56 by ejommy            #+#    #+#             */
-/*   Updated: 2019/04/05 12:19:19 by ejommy           ###   ########.fr       */
+/*   Created: 2019/04/05 11:14:58 by ejommy            #+#    #+#             */
+/*   Updated: 2019/04/05 11:53:18 by ejommy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef ZOMBIEEVENT_HPP
+#define ZOMBIEEVENT_HPP
 
-#include <string>
+#include "Zombie.hpp"
 
-class Zombie
+class ZombieEvent
 {
-	std::string	_name;
 	std::string	_type;
 public:
-	Zombie();
-	Zombie( std::string, std:: string );
-	void	setParams( std::string, std:: string );
-	~Zombie();
-	void	announce( void );
+	void	setZombieType( std::string );
+	Zombie*	newZombie(std::string );
+	Zombie*	randomChump( void );
 };
 
 #endif

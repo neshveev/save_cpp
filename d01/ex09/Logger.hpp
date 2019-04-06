@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Logger.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejommy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 16:55:56 by ejommy            #+#    #+#             */
-/*   Updated: 2019/04/05 12:19:19 by ejommy           ###   ########.fr       */
+/*   Created: 2019/04/06 15:59:03 by ejommy            #+#    #+#             */
+/*   Updated: 2019/04/06 17:04:09 by ejommy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef LOGGER_HPP
+# define LOGGER_HPP
 
 #include <string>
 
-class Zombie
+class Logger
 {
 	std::string	_name;
-	std::string	_type;
+	void	logToConsole( std::string );
+	void	logToFile( std::string );
 public:
-	Zombie();
-	Zombie( std::string, std:: string );
-	void	setParams( std::string, std:: string );
-	~Zombie();
-	void	announce( void );
+	Logger( std::string );
+	std::string	makeLogEntry( std::string );
+	void	log(std::string const & dest, std::string const & message);
 };
 
 #endif

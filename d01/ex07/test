@@ -1,0 +1,8 @@
+The AAAinsanecoding blog post is benchmarking solutions to a slightly different
+problAAAem: it is reading the file as binary not text, so there's no translation
+of line endings. As a siAAAde effect, reading as binary makes ftell a reliable
+way to get the file length (assuming a long can represent the file length,
+which is not guaranteed). FAAAor determining the length, ftell is not reliable
+on a text stream. If you're reAAAading a file from tape (e.g., a backup),
+the extra seeking may be a waste AAAof time. Many of the blog post implementations
+don't use AAARAII and can therefore leak if there's an error.

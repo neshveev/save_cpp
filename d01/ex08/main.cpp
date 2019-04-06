@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejommy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 16:55:56 by ejommy            #+#    #+#             */
-/*   Updated: 2019/04/05 12:19:19 by ejommy           ###   ########.fr       */
+/*   Created: 2019/04/06 15:42:28 by ejommy            #+#    #+#             */
+/*   Updated: 2019/04/06 15:48:34 by ejommy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "Human.hpp"
 
-#include <string>
-
-class Zombie
+int	main()
 {
-	std::string	_name;
-	std::string	_type;
-public:
-	Zombie();
-	Zombie( std::string, std:: string );
-	void	setParams( std::string, std:: string );
-	~Zombie();
-	void	announce( void );
-};
+	Human	human;
+	std::string	target;
 
-#endif
+	target = "Fire";
+
+	human.action("meleeAttack", target);
+	human.action("rangedAttack", target);
+	human.action("intimidatingShout", target);
+	human.action("foo", target);
+	return (0);
+}

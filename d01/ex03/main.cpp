@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejommy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 16:59:52 by ejommy            #+#    #+#             */
-/*   Updated: 2019/04/05 12:22:01 by ejommy           ###   ########.fr       */
+/*   Created: 2019/04/05 11:39:05 by ejommy            #+#    #+#             */
+/*   Updated: 2019/04/05 14:58:48 by ejommy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include "ZombieHorde.hpp"
 #include <iostream>
 
-Zombie::Zombie( void )
+void	create(size_t nb)
 {
-	return ;
+	ZombieHorde		e1 = ZombieHorde::ZombieHorde(nb);
+
+	e1.announce();
 }
 
-Zombie::Zombie(std::string name, std::string type)
+void	create()
 {
-	this->_name = name;
-	this->_type = type;
+	ZombieHorde		e2;
+
+	e2.announce();
 }
 
-void	Zombie::setParams(std::string name, std::string type)
+int		main()
 {
-	this->_name = name;
-	this->_type = type;
+	size_t			nb;
+
+	std::cout << "Enter nb zombie: ";
+	std::cin >> nb;
+	create(nb);
+	create();
+	return (0);
 }
 
-Zombie::~Zombie()
-{
-	std::cout << "So sad! Zombie died... twice?" << std::endl;
-}
-
-void	Zombie::announce( void )
-{
-	std::cout << "<" << this->_name << " (" << this->_type << ")> Shhhhhhhh..."
-		<< std::endl;
-}
