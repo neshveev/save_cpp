@@ -6,7 +6,7 @@
 /*   By: ejommy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 17:57:33 by ejommy            #+#    #+#             */
-/*   Updated: 2019/04/11 18:30:07 by ejommy           ###   ########.fr       */
+/*   Updated: 2019/04/11 18:55:57 by ejommy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class AWeapon
 	int	_apcost;
 	int	_damage;
 	std::string	_name;
+protected:
 	AWeapon( void );
 
 public:

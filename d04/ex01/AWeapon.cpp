@@ -6,7 +6,7 @@
 /*   By: ejommy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 18:05:35 by ejommy            #+#    #+#             */
-/*   Updated: 2019/04/11 18:30:05 by ejommy           ###   ########.fr       */
+/*   Updated: 2019/04/11 18:53:49 by ejommy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ AWeapon::~AWeapon( void )
 {
 	return ;
 }
+
 AWeapon	&AWeapon::operator=( AWeapon const & rhs )
 {
 	this->setName(rhs.getName());
@@ -71,7 +72,3 @@ void	AWeapon::setDamage( int const & damage )
 {
 	this->_damage = damage;
 }
-
-
-
-
