@@ -6,7 +6,7 @@
 /*   By: ejommy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 18:59:51 by ejommy            #+#    #+#             */
-/*   Updated: 2019/04/11 19:07:18 by ejommy           ###   ########.fr       */
+/*   Updated: 2019/04/12 13:13:50 by ejommy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ PlasmaRifle	&PlasmaRifle::operator=( PlasmaRifle const & rhs )
 {
 	if (this == &rhs)
 		return *this;
-	this->setName(rhs.getName());
-	this->setAPCost(rhs.getAPCost());
-	this->setDamage(rhs.getDamage());
+	AWeapon::operator=(rhs);
 	return *this;
 }
 

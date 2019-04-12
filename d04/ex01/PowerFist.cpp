@@ -6,14 +6,14 @@
 /*   By: ejommy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 18:59:51 by ejommy            #+#    #+#             */
-/*   Updated: 2019/04/11 19:12:52 by ejommy           ###   ########.fr       */
+/*   Updated: 2019/04/12 14:04:51 by ejommy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PowerFist.hpp"
 #include <iostream>
 
-PowerFist::PowerFist( void ): AWeapon("Plasma Rifle", 5, 21)
+PowerFist::PowerFist( void ): AWeapon("Power Fist", 8, 50)
 {
 	return ;
 }

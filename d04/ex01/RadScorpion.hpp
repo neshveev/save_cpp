@@ -6,7 +6,7 @@
 /*   By: ejommy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 19:29:58 by ejommy            #+#    #+#             */
-/*   Updated: 2019/04/11 20:28:23 by ejommy           ###   ########.fr       */
+/*   Updated: 2019/04/12 14:09:29 by ejommy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 	RadScorpion( void );
 	RadScorpion( RadScorpion const & rhs );
 	RadScorpion	&operator=( RadScorpion const & rhs );
-	~RadScorpion( void );
+	virtual ~RadScorpion( void );
 };
 
 #endif
