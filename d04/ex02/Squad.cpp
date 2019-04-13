@@ -60,26 +60,23 @@ ISpaceMarine*	Squad::getUnit( int nb ) const
 int		Squad::push( ISpaceMarine* unit )
 {
 	t_container*	tmp;
-	int				res;
 
 	tmp = this->_squad;
-	res = 0;
 	if (this->_isAlready(unit, this->_squad))
 		return 0;
 	if (tmp == NULL)
 	{
 		this->_squad = new t_container(unit);
-		return 1;
+		this->_nb += 1;
+		return this->_nb;
 	}
 	else
 	{
 		while (tmp->next)
-		{
 			tmp = tmp->next;
-			res++;
-		}
+		this->_nb += 1;
 		tmp->next = new t_container(unit);
-		return res + 1;
+		return this->_nb;
 	}
 }
 
